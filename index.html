@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script> 
+    <script crossorigin src="https://unpkg.com/babel-standalone@7.0.0-beta.3/babel.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="root"></div>
+    <script type="text/babel">
+        const rootElement = document.getElementById('root')
+        
+        const firstChild = <span>First child</span>
+        const secondChild = <span>Second child </span>
+
+        const element = React.createElement('div', {className:'container'}, firstChild, secondChild)
+        // console.log(element)
+        // const element = <div>{firstChild} {secondChild}</div>
+        // rootElement.appendChild(element)
+        ReactDOM.render(element, rootElement)
+    </script>
+</body>
+</html>
